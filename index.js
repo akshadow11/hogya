@@ -212,11 +212,8 @@ app.get('/', async(req, res) => {
     );
     const mainRes = await output.json();
     delete mainRes.developer;
-    mainRes.programmer="TheVirtualHero"
-    res.json([{
-      "pan_number":pan_numbers,
-      "modifiedBy":"TheVirtualHero"
-    },mainRes]);
+    mainRes.Programmer="TheVirtualHero"
+    res.json(mainRes);
   });
   
 
