@@ -211,6 +211,8 @@ app.get('/', async(req, res) => {
       `https://pan-info.vercel.app/api?pan=${pan_numbers}`,
     );
     const mainRes = await output.json();
+    delete mainRes.developer;
+    mainRes.programmer="TheVirtualHero"
     res.json([{
       "pan_number":pan_numbers,
       "modifiedBy":"TheVirtualHero"
